@@ -1,0 +1,21 @@
+{
+    "name": "hexlet/code",
+    "type": "project",
+    "description": "Hexlet brain-game code",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Hexlet\\Code\\": "src/"
+        }
+    },
+    "bin": [
+        "bin/brain-games"
+    ],
+    "authors": [
+        {
+            "name": "Артём Белый",
+            "email": "arcmadcan@yandex.ru"
+        }
+    ],
+    "require": {}
+}
