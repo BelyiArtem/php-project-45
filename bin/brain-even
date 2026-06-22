@@ -1,0 +1,68 @@
+#!/usr/bin/env php
+<?php
+
+$autoloadPath1 = __DIR__ . '/../../../autoload.php';
+$autoloadPath2 = __DIR__ . '/../vendor/autoload.php';
+if (file_exists($autoloadPath1)) {
+    require_once $autoloadPath1;
+} else {
+    require_once $autoloadPath2;
+}
+
+use function cli\line;
+use function cli\prompt;
+
+const REQUIRED_CORRECT_ANSWERS = 3;
+const MAX_RANDOM_NUMBER = 100;
+
+line('Welcome to the Brain Game!');
+$playerName = prompt('May I have your name?');
+line("Hello, %s!", $playerName);
+start($playerName);
+
+function start(string $playerName): void
+{
+    line('Answer "yes" if the number is even, otherwise answer "no".');
+    $correctAnswerCount = 0;
+
+    while ($correctAnswerCount !== REQUIRED_CORRECT_ANSWERS) {
+        $randomNumber = rand(0, MAX_RANDOM_NUMBER);
+        askQuestion($randomNumber);
+        $userAnswer = prompt('Your answer');
+        if (checkAnswer($userAnswer, $randomNumber, $playerName) === true) {
+            $correctAnswerCount++;
+            continue;
+        }
+        break; 
+    }
+
+    if ($correctAnswerCount === REQUIRED_CORRECT_ANSWERS) {
+        line("Congratulations, %s!", $playerName);
+    }
+}
+
+function askQuestion(int $randomNumber): void
+{
+    line("Question: %s", $randomNumber);
+}
+
+function checkAnswer(string $userAnswer, int $randomNumber, string $playerName): bool
+{
+    $isNumberEven = $randomNumber % 2 === 0;
+    $userAnswer = strtolower($userAnswer);
+
+    if ($userAnswer === 'yes' && $isNumberEven) {
+        line('Correct!');
+        return true;
+    }
+
+    if ($userAnswer === 'no' && !$isNumberEven) {
+        line('Correct!');
+        return true;
+    }
+
+    $expectedResponse = $isNumberEven ? 'yes' : 'no';
+    line("'%s' is wrong answer ;(. Correct answer was '%s'. Let's try again, %s!", $userAnswer, $expectedResponse, $playerName);
+
+    return false;
+}
