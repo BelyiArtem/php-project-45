@@ -11,7 +11,7 @@
 [![SonarQube Cloud](https://sonarcloud.io/images/project_badges/sonarcloud-light.svg)](https://sonarcloud.io/summary/new_code?id=BelyiArtem_php-project-45)
 
 
-<h1 align="center"> The game: "Brain even"</h1>
+<h1 align="center">Project Brain Games</h1>
 
 Installation
 ------------
@@ -26,7 +26,7 @@ make install
   <img src="media/install_dep.gif"/>
 </div>
 
-## About
+## 1. Brain even
 The goal of a game is as follows: a random number is displayed to the user. They must answer 'yes' if the number is even, or 'no' if it is odd. The user must provide three correct answers in a row to win.
 
 Use [make] to run the game:
@@ -36,7 +36,7 @@ make brain-even
 
 <div>
   <h3>Example (player win the game):</h3>
-  <img src="media/game_win.gif"/>
+  <img src="media/brain-even/game_win.gif"/>
 </div>
 
 ------------
@@ -45,5 +45,30 @@ Any invalid input is considered an error (e.g., 'n') and counts as an incorrect 
 
 <div>
   <h3>Example (player lost the game):</h3>
-  <img src="media/game_lose.gif"/>
+  <img src="media/brain-even/game_lose.gif"/>
+</div>
+
+## 2. Brain calculcator
+
+Суть игры в следующем: пользователю показывается случайное математическое выражение, например 35 + 16, которое нужно вычислить и записать правильный ответ
+
+The goal of a game is as follows: a random mathematical expression is displayed to the user (e.g. 35 + 16) which they must solve and provide the correct answer.
+
+Use [make] to run the game:
+```bash
+make brain-calc
+```
+
+<div>
+  <h3>Example (player win the game):</h3>
+  <img src="media/brain-calc/calc_win.gif"/>
+</div>
+
+------------
+
+Any invalid input is considered an error (e.g., '5 * 10 and user anwser is 250') and counts as an incorrect answer.
+
+<div>
+  <h3>Example (player lost the game):</h3>
+  <img src="media/brain-calc/calc_lose.gif"/>
 </div>

@@ -10,6 +10,6 @@ if (file_exists($autoloadPath1)) {
 }
 
 use function BrainGames\Engine\runGame;
-use function BrainGames\Games\Even\evenGame;
+use function BrainGames\Games\Calc\calcGame;
 
-runGame(fn() => evenGame());
+runGame(fn() => calcGame());
