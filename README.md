@@ -50,8 +50,6 @@ Any invalid input is considered an error (e.g., 'n') and counts as an incorrect 
 
 ## 2. Brain calculcator
 
-Суть игры в следующем: пользователю показывается случайное математическое выражение, например 35 + 16, которое нужно вычислить и записать правильный ответ
-
 The goal of a game is as follows: a random mathematical expression is displayed to the user (e.g. 35 + 16) which they must solve and provide the correct answer.
 
 Use [make] to run the game:
