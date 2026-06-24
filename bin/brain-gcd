@@ -10,7 +10,7 @@ if (file_exists($autoloadPath1)) {
 }
 
 use function BrainGames\Engine\runGame;
-use function BrainGames\Games\Calc\calcGame;
+use function BrainGames\Games\Gcd\gcdGame;
 
-$gameDescription = 'What is the result of the expression?';
-runGame(fn() => calcGame(), $gameDescription);
+$gameDescription = 'Find the greatest common divisor of given numbers.';
+runGame(fn() => gcdGame(), $gameDescription);

@@ -36,7 +36,7 @@ make brain-even
 
 <div>
   <h3>Example (player win the game):</h3>
-  <img src="media/brain-even/game_win.gif"/>
+  <img src="media/brain-even/even_win.gif"/>
 </div>
 
 ------------
@@ -45,7 +45,7 @@ Any invalid input is considered an error (e.g., 'n') and counts as an incorrect 
 
 <div>
   <h3>Example (player lost the game):</h3>
-  <img src="media/brain-even/game_lose.gif"/>
+  <img src="media/brain-even/even_lose.gif"/>
 </div>
 
 ## 2. Brain calculcator
@@ -69,4 +69,27 @@ Any invalid input is considered an error (e.g., '5 * 10 and user anwser is 250')
 <div>
   <h3>Example (player lost the game):</h3>
   <img src="media/brain-calc/calc_lose.gif"/>
+</div>
+
+## 3. Brain greatest common divisor
+
+The goal of a game is as follows: two random number is displayed to the user (e.g. 25 50) which they must solve and provide the greatest common divisor.
+
+Use [make] to run the game:
+```bash
+make brain-gcd
+```
+
+<div>
+  <h3>Example (player win the game):</h3>
+  <img src="media/brain-gcd/gcd_win.gif"/>
+</div>
+
+------------
+
+Any invalid input is considered an error (e.g., '25  50 and user anwser is 1') and counts as an incorrect answer.
+
+<div>
+  <h3>Example (player lost the game):</h3>
+  <img src="media/brain-gcd/gcdlose.gif"/>
 </div>

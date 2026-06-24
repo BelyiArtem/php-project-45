@@ -12,19 +12,20 @@ function getPlayerName(): string
     return prompt('May I have your name?');
 }
 
-function runGame(callable $game): void
+function runGame(callable $game, string $gameDescription): void
 {
     $wins = 0;
     line('Welcome to the Brain Game!');
     $playerName = getPlayerName();
     line("Hello, %s!", $playerName);
+    line($gameDescription);
 
     while ($wins < ROUNDS_TO_WIN) {
         [$question, $correctAnswer] = $game();
         askQuestion($question);
-        $userAnswer = getPlayerAnswer();
+        $playerAnswer = getPlayerAnswer();
 
-        if (isValidAnswer($userAnswer, $correctAnswer)) {
+        if (isValidAnswer($playerAnswer, $correctAnswer)) {
             $wins++;
         } else {
             interruptGame($playerName);
@@ -57,7 +58,7 @@ function isValidAnswer(string $userAnswer, string $expectedResponse): bool
     return false;
 }
 
-function interruptGame(string $playerName)
+function interruptGame(string $playerName): void
 {
     line("Let's try again, %s!", $playerName);
 }

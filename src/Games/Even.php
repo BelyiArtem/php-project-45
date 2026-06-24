@@ -2,8 +2,6 @@
 
 namespace BrainGames\Games\Even;
 
-use function cli\line;
-
 const MAX_RANDOM_NUMBER = 100;
 
 function isRandomNumberEven(int $randomNumber): string
@@ -13,7 +11,6 @@ function isRandomNumberEven(int $randomNumber): string
 
 function evenGame(): array
 {
-    line('Answer "yes" if the number is even, otherwise answer "no".');
     $randomNumber = rand(0, MAX_RANDOM_NUMBER);
     $answer = isRandomNumberEven($randomNumber);
 

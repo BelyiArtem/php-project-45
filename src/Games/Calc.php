@@ -2,13 +2,10 @@
 
 namespace BrainGames\Games\Calc;
 
-use function cli\line;
-
 const MATH_OPERATIONS = ['+', '-', '*'];
 
 function calcGame(): array
 {
-    line('What is the result of the expression?');
     $a = rand(0, 100);
     $b = rand(0, 100);
     $operation = MATH_OPERATIONS[array_rand(MATH_OPERATIONS)];
@@ -32,6 +29,8 @@ function calculate(int $a, int $b, string $operation): int
         case '*':
             $result = $a * $b;
             break;
+        default:
+            return $result;
     }
 
     return $result;
