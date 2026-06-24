@@ -121,3 +121,26 @@ Any invalid input is considered an error (e.g., '5 7 9 11 13 ... 17 19 21 23' an
   <h3>Example (player lost the game):</h3>
   <img src="media/brain-progression/progression_lost.gif"/>
 </div>
+
+## 5. Is number prime
+
+Objective of the Game: a random number is displayed to the user. They must answer 'yes' if the number is prime, or 'no'. The user must provide three correct answers in a row to win.
+
+Use [make] to run the game:
+```bash
+make brain-prime
+```
+
+<div>
+  <h3>Example (player win the game):</h3>
+  <img src="media/games/prime/win.gif"/>
+</div>
+
+------------
+
+Any invalid input is considered an error and counts as an incorrect answer.
+
+<div>
+  <h3>Example (player lost the game):</h3>
+  <img src="media/games/prime/lost.gif"/>
+</div>
