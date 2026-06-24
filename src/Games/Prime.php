@@ -15,15 +15,9 @@ function isRandomNumberPrime(int $number): string
     if ($number <= 1) {
         return 'no';
     }
-    if ($number <= 3) {
-        return 'yes';
-    }
-    if ($number % 2 === 0 || $number % 3 === 0) {
-        return 'no';
-    }
 
-    for ($i = 5; $i * $i <= $number; $i += 6) {
-        if ($number % $i === 0 || $number % ($i + 2) === 0) {
+    for ($i = 2; $i <= sqrt($number); $i++) {
+        if ($number % $i == 0) {
             return 'no';
         }
     }
