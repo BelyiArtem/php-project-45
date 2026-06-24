@@ -6,8 +6,8 @@ const MATH_OPERATIONS = ['+', '-', '*'];
 
 function calcGame(): array
 {
-    $a = rand(0, 100);
-    $b = rand(0, 100);
+    $a = random_int(0, 100);
+    $b = random_int(0, 100);
     $operation = MATH_OPERATIONS[array_rand(MATH_OPERATIONS)];
     $expression = "$a $operation $b";
     $answer = calculate($a, $b, $operation);
