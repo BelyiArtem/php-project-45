@@ -4,8 +4,8 @@ namespace BrainGames\Games\Gcd;
 
 function gcdGame(): array
 {
-    $a = rand(0, 100);
-    $b = rand(0, 100);
+    $a = random_int(0, 100);
+    $b = random_int(0, 100);
     $expression = "$a $b";
     $answer = gcd($a, $b);
 

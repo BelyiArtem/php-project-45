@@ -91,5 +91,33 @@ Any invalid input is considered an error (e.g., '25  50 and user anwser is 1') a
 
 <div>
   <h3>Example (player lost the game):</h3>
-  <img src="media/brain-gcd/gcdlose.gif"/>
+  <img src="media/brain-gcd/gcd_lost.gif"/>
+</div>
+
+## 4. Arithmetic Progression
+
+Objective of the Game: The game presents a numerical sequence to the player where one number is intentionally omitted and marked with an ellipsis (...). The player's task is to identify the missing number based on the given sequence pattern.
+
+Example Scenario: Consider the sequence: 5 7 9 11 13 ... 17 19 21 23
+
+The common difference between numbers is +2
+The missing number in this case is 15
+
+Use [make] to run the game:
+```bash
+make brain-progression
+```
+
+<div>
+  <h3>Example (player win the game):</h3>
+  <img src="media/brain-progression/progression_win.gif"/>
+</div>
+
+------------
+
+Any invalid input is considered an error (e.g., '5 7 9 11 13 ... 17 19 21 23' and player consider 9) and counts as an incorrect answer.
+
+<div>
+  <h3>Example (player lost the game):</h3>
+  <img src="media/brain-progression/progression_lost.gif"/>
 </div>

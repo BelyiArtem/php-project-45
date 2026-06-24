@@ -9,7 +9,7 @@ const ROUNDS_TO_WIN = 3;
 
 function getPlayerName(): string
 {
-    return prompt('May I have your name?');
+    return prompt('May I have your name?', false, ' ');
 }
 
 function runGame(callable $game, string $gameDescription): void

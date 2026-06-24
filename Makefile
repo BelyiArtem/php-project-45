@@ -1,14 +1,16 @@
-install: 
+install:
 	composer install
-validate: 
+validate:
 	composer validate
-brain-games: 
+brain-games:
 	./bin/brain-games
-brain-even: 
+brain-even:
 	./bin/brain-even
-brain-calc: 
+brain-calc:
 	./bin/brain-calc
-brain-gcd: 
+brain-gcd:
 	./bin/brain-gcd
+brain-progression:
+	./bin/brain-progression
 lint:
 	composer exec --verbose phpcs -- --standard=PSR12 src bin

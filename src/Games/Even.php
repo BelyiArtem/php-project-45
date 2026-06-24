@@ -11,7 +11,7 @@ function isRandomNumberEven(int $randomNumber): string
 
 function evenGame(): array
 {
-    $randomNumber = rand(0, MAX_RANDOM_NUMBER);
+    $randomNumber = random_int(0, MAX_RANDOM_NUMBER);
     $answer = isRandomNumberEven($randomNumber);
 
     return [$randomNumber, $answer];
