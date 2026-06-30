@@ -21,6 +21,15 @@ function calcGame(): array
     return [$expression, (string)$answer];
 }
 
+class InvalidOperationException extends Exception
+{
+    public function __construct(string $operation)
+    {
+        $message = "Invalid operation '$operation'. Supported operations: +, -, *";
+        parent::__construct($message);
+    }
+}
+
 function calculate(int $a, int $b, string $operation): int
 {
     $result = 0;
@@ -36,7 +45,7 @@ function calculate(int $a, int $b, string $operation): int
             $result = $a * $b;
             break;
         default:
-            throw new Exception('Operation not exists.');
+            throw new InvalidOperationException($operation);
     }
 
     return $result;
