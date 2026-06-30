@@ -2,10 +2,16 @@
 
 namespace BrainGames\Games\Calc;
 
+use Exception;
+
+use function cli\line;
+
 const MATH_OPERATIONS = ['+', '-', '*'];
+const GAME_DESCRIPTION = 'What is the result of the expression?';
 
 function calcGame(): array
 {
+    line(GAME_DESCRIPTION);
     $a = random_int(0, 100);
     $b = random_int(0, 100);
     $operation = MATH_OPERATIONS[array_rand(MATH_OPERATIONS)];
@@ -30,7 +36,7 @@ function calculate(int $a, int $b, string $operation): int
             $result = $a * $b;
             break;
         default:
-            return $result;
+            throw new Exception('Operation not exists.');
     }
 
     return $result;

@@ -4,9 +4,6 @@
     "description": "Hexlet brain-game code",
     "license": "MIT",
     "autoload": {
-        "psr-4": {
-            "Hexlet\\Code\\": "src/"
-        },
         "files": [
             "src/Cli.php", 
             "src/Engine.php", 

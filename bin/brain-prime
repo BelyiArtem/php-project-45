@@ -9,8 +9,7 @@ if (file_exists($autoloadPath1)) {
     require_once $autoloadPath2;
 }
 
-use function BrainGames\Engine\runGame;
+use function BrainGames\Engine\run;
 use function BrainGames\Games\Prime\primeGame;
 
-$gameDescription = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-runGame(fn() => primeGame(), $gameDescription);
+run(fn() => primeGame());

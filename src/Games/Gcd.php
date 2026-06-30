@@ -2,17 +2,22 @@
 
 namespace BrainGames\Games\Gcd;
 
+use function cli\line;
+
+const GAME_DESCRIPTION = 'Find the greatest common divisor of given numbers.';
+
 function gcdGame(): array
 {
+    line(GAME_DESCRIPTION);
     $a = random_int(0, 100);
     $b = random_int(0, 100);
     $expression = "$a $b";
-    $answer = gcd($a, $b);
+    $answer = getGcd($a, $b);
 
     return [$expression, $answer];
 }
 
-function gcd(int $a, int $b): int
+function getGcd(int $a, int $b): int
 {
     while ($b !== 0) {
         $remainder = $a % $b;

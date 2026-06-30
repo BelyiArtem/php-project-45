@@ -29,10 +29,8 @@ After installing validate composer.json:
 ```bash
 make validate
 ```
-<div>
-  Example
-  <img src="media/install_dep.gif"/>
-</div>
+Example
+[![asciicast](https://asciinema.org/a/7mMIwVvEYGCzn2f4.svg)](https://asciinema.org/a/7mMIwVvEYGCzn2f4)
 
 <details><summary><b>1. Even number</b></summary>
 <b>The goal of a game is as follows:</b> a random number is displayed to the user. They must answer 'yes' if the number is even, or 'no' if it is odd.
@@ -41,15 +39,15 @@ Use [make] to run the game:
 ```bash
 make brain-even
 ```
-
 <div>
   <h4>Example (player win the game):</h4>
-  <img src="media/games/even/win.gif"/>
-</div>
 
+[![asciicast](https://asciinema.org/a/w4R118HTLftF3sj5.svg)](https://asciinema.org/a/w4R118HTLftF3sj5)
+</div>
 <div>
-  <h4>Example (player failed the game):</h4>
-  <img src="media/games/even/fail.gif"/>
+<h4>Example (player failed the game):</h4>
+
+[![asciicast](https://asciinema.org/a/WiLadIxmWge254iX.svg)](https://asciinema.org/a/WiLadIxmWge254iX)
 </div>
 </details>
 
@@ -63,12 +61,14 @@ make brain-calc
 
 <div>
   <h4>Example (player win the game):</h4>
-  <img src="media/games/calculator/win.gif"/>
+
+[![asciicast](https://asciinema.org/a/Ubw6HoChI9kTOTcr.svg)](https://asciinema.org/a/Ubw6HoChI9kTOTcr)
 </div>
 
 <div>
   <h4>Example (player failed the game):</h4>
-  <img src="media/games/calculator/fail.gif"/>
+
+[![asciicast](https://asciinema.org/a/snsFNNkcjUmCRevh.svg)](https://asciinema.org/a/snsFNNkcjUmCRevh)
 </div>
 </details>
 
@@ -82,12 +82,14 @@ make brain-gcd
 
 <div>
   <h4>Example (player win the game):</h4>
-  <img src="media/games/gcd/win.gif"/>
+  
+  [![asciicast](https://asciinema.org/a/BbFv2l3DRRfxFnlC.svg)](https://asciinema.org/a/BbFv2l3DRRfxFnlC)
 </div>
 
 <div>
   <h4>Example (player failed the game):</h4>
-  <img src="media/games/gcd/fail.gif"/>
+  
+  [![asciicast](https://asciinema.org/a/WWyszs6q1xq6oVDe.svg)](https://asciinema.org/a/WWyszs6q1xq6oVDe)
 </div>
 </details>
 
@@ -106,12 +108,14 @@ make brain-progression
 
 <div>
   <h4>Example (player win the game):</h4>
-  <img src="media/games/progression/win.gif"/>
+  
+  [![asciicast](https://asciinema.org/a/Wk2QlE8Mwd9R6vfe.svg)](https://asciinema.org/a/Wk2QlE8Mwd9R6vfe)
 </div>
 
 <div>
   <h4>Example (player failed the game):</h4>
-  <img src="media/games/progression/fail.gif"/>
+  
+  [![asciicast](https://asciinema.org/a/qdczt4Ec48he0BY2.svg)](https://asciinema.org/a/qdczt4Ec48he0BY2)
 </div>
 </details>
 
@@ -125,11 +129,13 @@ make brain-prime
 
 <div>
   <h4>Example (player win the game):</h4>
-  <img src="media/games/prime/win.gif"/>
+
+  [![asciicast](https://asciinema.org/a/cyadDVZuWQPHlo0g.svg)](https://asciinema.org/a/cyadDVZuWQPHlo0g)
 </div>
 
 <div>
   <h4>Example (player failed the game):</h4>
-  <img src="media/games/prime/fail.gif"/>
+
+  [![asciicast](https://asciinema.org/a/BVK6gRVtlKtaUsMJ.svg)](https://asciinema.org/a/BVK6gRVtlKtaUsMJ)
 </div>
 </details>

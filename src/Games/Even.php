@@ -2,17 +2,21 @@
 
 namespace BrainGames\Games\Even;
 
-const MAX_RANDOM_NUMBER = 100;
+use function cli\line;
 
-function isRandomNumberEven(int $randomNumber): string
-{
-    return $randomNumber % 2 === 0 ? 'yes' : 'no';
-}
+const MAX_RANDOM_NUMBER = 100;
+const GAME_DESCRIPTION = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 function evenGame(): array
 {
+    line(GAME_DESCRIPTION);
     $randomNumber = random_int(0, MAX_RANDOM_NUMBER);
-    $answer = isRandomNumberEven($randomNumber);
+    $answer = isEven($randomNumber) ? 'yes' : 'no';
 
     return [$randomNumber, $answer];
+}
+
+function isEven(int $randomNumber): bool
+{
+    return $randomNumber % 2 === 0;
 }

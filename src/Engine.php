@@ -7,43 +7,27 @@ use function cli\prompt;
 
 const ROUNDS_TO_WIN = 3;
 
-function getPlayerName(): string
-{
-    return prompt('May I have your name?', false, ' ');
-}
-
-function runGame(callable $game, string $gameDescription): void
+function run(callable $game): void
 {
     $wins = 0;
     line('Welcome to the Brain Game!');
-    $playerName = getPlayerName();
+    $playerName = prompt('May I have your name?', false, ' ');
     line("Hello, %s!", $playerName);
-    line($gameDescription);
 
-    while ($wins < ROUNDS_TO_WIN) {
+    for ($i = 0; $i < ROUNDS_TO_WIN; $i++) {
         [$question, $correctAnswer] = $game();
-        askQuestion($question);
-        $playerAnswer = getPlayerAnswer();
+        line("Question: %s", $question);
+        $playerAnswer = prompt('Your answer');
 
-        if (isValidAnswer($playerAnswer, $correctAnswer)) {
-            $wins++;
-        } else {
-            interruptGame($playerName);
+        if (!isValidAnswer($playerAnswer, $correctAnswer)) {
+            line("Let's try again, %s!", $playerName);
             return;
         }
+
+        $wins++;
     }
 
     line("Congratulations, %s!", $playerName);
-}
-
-function askQuestion(mixed $expression): void
-{
-    line("Question: %s", $expression);
-}
-
-function getPlayerAnswer(): string
-{
-    return prompt('Your answer');
 }
 
 function isValidAnswer(string $userAnswer, string $expectedResponse): bool
@@ -56,9 +40,4 @@ function isValidAnswer(string $userAnswer, string $expectedResponse): bool
     line("'%s' is wrong answer ;(. Correct answer was '%s'.", $userAnswer, $expectedResponse);
 
     return false;
-}
-
-function interruptGame(string $playerName): void
-{
-    line("Let's try again, %s!", $playerName);
 }
