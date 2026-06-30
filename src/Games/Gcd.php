@@ -14,7 +14,7 @@ function gcdGame(): array
     $expression = "$a $b";
     $answer = getGcd($a, $b);
 
-    return [$expression, $answer];
+    return [$expression, (string)$answer];
 }
 
 function getGcd(int $a, int $b): int

@@ -26,5 +26,5 @@ function progressionGame(): array
     $progression[$entry] = '..';
     $expression = implode(' ', $progression);
 
-    return [$expression, $answer];
+    return [$expression, (string)$answer];
 }

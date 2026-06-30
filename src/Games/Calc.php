@@ -18,7 +18,7 @@ function calcGame(): array
     $expression = "$a $operation $b";
     $answer = calculate($a, $b, $operation);
 
-    return [$expression, $answer];
+    return [$expression, (string)$answer];
 }
 
 function calculate(int $a, int $b, string $operation): int
